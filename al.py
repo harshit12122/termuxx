@@ -18,7 +18,7 @@ default_data = {
         "tasks": []
     },
     "Harshit": {
-        "phone": "+918708215199",
+        "phone": "918708215199",
         "tasks": []
     }
 }
@@ -29,14 +29,34 @@ import time
 from urllib.parse import quote
 # from pynput.keyboard import Key, Controller
 
-def send_to_whatsapp_group(message, group):
-    message = "".join(i+"\n" for i in message)
-    encoded_message = quote(message.replace("https", " "))
-    phone_number = ""
-    print(1)
-    url = f'whatsapp://send?phone={phone_number}^&text={encoded_message}'
-    subprocess.Popen(['cmd', '/c', 'start', '', url], shell=True)
-    time.sleep(2)
+import subprocess
+from urllib.parse import quote
+
+def send_to_whatsapp_group(message, phone_number):
+    text = "\n".join(message)
+    encoded = quote(text)
+
+    url = f"https://wa.me/{phone_number}?text={encoded}"
+
+    cmd = [
+        "am",
+        "start",
+        "-a",
+        "android.intent.action.VIEW",
+        "-d",
+        url
+    ]
+
+    subprocess.run(cmd)
+    
+# def send_to_whatsapp_group(message, group):
+#     message = "".join(i+"\n" for i in message)
+#     encoded_message = quote(message.replace("https", " "))
+#     phone_number = ""
+#     print(1)
+#     url = f'whatsapp://send?phone={phone_number}^&text={encoded_message}'
+#     subprocess.Popen(['cmd', '/c', 'start', '', url], shell=True)
+#     time.sleep(2)
 
     # if len(group.split("\n")) >1: #assignments
     #     group = group.split("\n")
