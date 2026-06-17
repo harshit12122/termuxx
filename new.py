@@ -12,14 +12,6 @@ subprocess.run(["termux-telephony-call", phone_number])
 
 
 
-
-
-
-
-
-
-
-
 # def scroll_down():
 #     # Swipe from bottom (middle-low) to top (middle-high)
 #     # Syntax: adb shell input swipe <start_x> <start_y> <end_x> <end_y> <duration_ms>
