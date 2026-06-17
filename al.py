@@ -34,7 +34,7 @@ def send_to_whatsapp_group(message, group):
     encoded_message = quote(message.replace("https", " "))
     phone_number = ""
     print(1)
-    cmd = f'start whatsapp://send?phone={phone_number}^&text={encoded_message}'
+    cmd = f'whatsapp://send?phone={phone_number}^&text={encoded_message}'
     subprocess.Popen(["cmd", "/C", cmd], shell=True)
     time.sleep(2)
 
