@@ -6,19 +6,23 @@ FILE_NAME = "tasks.json"
 # Default data
 default_data = {
     "Kuldeep": {
-        "phone": "919876543210",
+        "phone": "919967563241",
         "tasks": []
     },
     "Rohit": {
-        "phone": "919123456789",
+        "phone": "918104812756",
         "tasks": []
     },
     "Nupur": {
-        "phone": "919999999999",
+        "phone": "919987525207",
         "tasks": []
     },
     "Harshit": {
         "phone": "918708215199",
+        "tasks": []
+    },
+    "Suraj": {
+        "phone": "917208210008",
         "tasks": []
     }
 }
